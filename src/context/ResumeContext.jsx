@@ -1,27 +1,65 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 
-const BASE_URL = "";
+const BASE_URL = "http://localhost:4000";
 
 const ResumeContext = createContext();
 
-const initialState = {};
+const initialState = {
+  loading: true,
+  error: "",
+  projects: [],
+};
 
 function reducer(state, action) {
   switch (action.type) {
+    case "loading":
+      return { ...state, loading: true };
+    case "projects":
+      return { ...state, loading: false, projects: action.payload };
+    case "rejected":
+      return { ...state, loading: false, error: action.payload };
+    default:
+      throw new Error("Unknown action type");
   }
 }
 
 function ResumeProvider({ children }) {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  return <ResumeContext.Provider value={{}}>{children}</ResumeContext.Provider>;
+  const [{ loading, error, projects }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
+
+  useEffect(() => {
+    async function fetchProjects() {
+      dispatch({ type: "loading" });
+      try {
+        const res = await fetch(`${BASE_URL}/projects`);
+        const data = await res.json();
+        dispatch({ type: "projects", payload: data });
+      } catch (error) {
+        dispatch({
+          type: "rejected",
+          payload: error.message || "Failed to fetch projects",
+        });
+      }
+    }
+
+    fetchProjects();
+  }, []);
+
+  return (
+    <ResumeContext.Provider value={{ loading, error, projects }}>
+      {children}
+    </ResumeContext.Provider>
+  );
 }
 
 function useResume() {
-  const context = useContext();
+  const context = useContext(ResumeContext);
   if (context === undefined)
-    throw new Error("CoffeeContext is used outside the CoffeeProvider");
+    throw new Error("ResumeContext is used outside the ResumeProvider");
 
   return context;
 }
 
-export { ResumeContext, useResume };
+export { ResumeProvider, useResume };

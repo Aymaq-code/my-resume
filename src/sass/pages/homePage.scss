@@ -84,6 +84,7 @@
             padding: 4.5rem 2.5rem;
             transform: translateY(90px);
             opacity: 0;
+            cursor: pointer;
             animation: fadeUp linear 0.5s forwards;
             &:nth-child(1) {
               background-color: #7a1f90;
@@ -108,6 +109,7 @@
             font-size: 2rem;
             letter-spacing: 2px;
             font-weight: 600;
+
             @media screen and (max-width: 410px) {
               font-size: 1.5rem;
             }

@@ -1,8 +1,9 @@
+import { Link, useNavigate } from "react-router-dom";
 import Navigation from "../layouts/Navigation";
 import Footer from "../layouts/Footer";
-import { Link } from "react-router-dom";
 
-export default function homePage() {
+export default function HomePage() {
+  const navigate = useNavigate();
   return (
     <main className="homePage">
       <Navigation />
@@ -14,20 +15,20 @@ export default function homePage() {
               <h1>Hello</h1>
               <h2>A Bit About Me</h2>
               <p>
-                I'm a paragraph. Click here to add your own text and edit me.
-                I’m a great place for you to tell a story and let your users
-                know a little more about you.
+                Welcome to my online CV! I specialize in web development and
+                have a passion for creating unique and innovative digital
+                experiences. Let's work together to bring your vision to life.
               </p>
             </div>
             <div className="links">
               <ul>
-                <li>
-                  <Link>Resume</Link>
+                <li onClick={() => navigate("/resume")}>
+                  <Link to="/resume">Resume</Link>
                 </li>
-                <li>
+                <li onClick={() => navigate("/projects")}>
                   <Link>Project</Link>
                 </li>
-                <li>
+                <li onClick={() => navigate("/contact")}>
                   <Link>Contact</Link>
                 </li>
               </ul>

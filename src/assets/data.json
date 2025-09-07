@@ -1,0 +1,68 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "coffee app",
+      "discription": "Kabul Coffee is designed to provide a seamless user experience for coffee lovers. Users can explore a wide variety of coffee menus, reserve tables online through an easy booking system, learn about the café, its team, and awards, read the latest blog articles, and contact the café easily via the contact form or social media links. The design emphasizes responsive layouts, professional typography, and visually appealing imagery to create a cozy and welcoming vibe.",
+      "image": "https://i.postimg.cc/vDRPD8Zt/homePage.png",
+      "technologies": [
+        "React",
+        "React Router DOM",
+        "SCSS",
+        "Font Awesome",
+        "Google Maps Embed",
+        "Local Storage",
+        "Context API"
+      ],
+      "live": "https://aymaq-code.github.io/coffee-app/"
+    },
+    {
+      "id": 2,
+      "name": "to-do list app",
+      "discription": "A stylish and interactive to-do list application built with React. Add, search, and delete task with a clean, responsive UI.",
+      "image": "https://i.postimg.cc/mk7nY1q5/todo-app.png",
+      "technologies": [
+        "React",
+        "CSS3",
+        "JavaScript (ES6+)",
+        "useReducer for cleaner state management"
+      ],
+      "live": "https://aymaq-code.github.io/notepad-app/"
+    },
+    {
+      "id": 3,
+      "name": "stationery store app",
+      "discription": "The Stationery Store Website is a modern and responsive e-commerce front-end project designed to showcase and sell premium stationery items. Built with HTML, CSS, SASS, and JavaScript, the website delivers a smooth shopping experience with an elegant layout and interactive features.",
+      "image": "https://i.postimg.cc/RZ2cBpqw/stationary-app.png",
+      "technologies": [
+        "HTML5",
+        "CSS3/SASS",
+        "JavaScript (ES6+)",
+        "Font Awesome"
+      ],
+      "live": "https://aymaq-code.github.io/stationary/"
+    },
+    {
+      "id": 4,
+      "name": "weather app",
+      "image": "https://i.postimg.cc/L4vLX8n9/weather-app.png",
+      "technologies": [
+        "React",
+        "WeatherAPI.com",
+        "CSS3",
+        "Free weather icons and images"
+      ],
+      "discription": "A beautiful and simple React Weather Forecast App that shows the current weather, upcoming 4-day forecast, UV index, humidity, wind, sunrise/sunset, and more — all with dynamic weather icons and images.",
+      "live": "https://aymaq-code.github.io/weather-app/"
+    },
+
+    {
+      "id": 5,
+      "name": "lightweight web animation",
+      "discription": "Many developers rely on heavy animation libraries (like AOS -Animate On Scroll) that can add up to 330KB to your bundle size,even when you only need 1-2 animation effects. This cansignificantly impact your website's loading time and performance.",
+      "image": "https://i.postimg.cc/XJzYtqVL/Light-Animation-app.png",
+      "technologies": ["HTML5", "CSS3", "JavaScript"],
+      "live": "https://aymaq-code.github.io/Lightweight-Web-Animations/"
+    }
+  ]
+}
