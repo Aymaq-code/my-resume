@@ -1,0 +1,13 @@
+// Abstracts
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./abstracts/base";
+@import "./abstracts/animations.scss";
+
+// Layouts
+@import "./layouts/container.scss";
+@import "./layouts/navigation.scss";
+@import "./layouts/footer.scss";
+
+//Pages
+@import "./pages/homePage.scss";

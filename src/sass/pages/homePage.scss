@@ -1,0 +1,160 @@
+.homePage {
+  &__content {
+    //border: 2px solid blue;
+
+    @include flexCenter;
+    gap: 0 40px;
+
+    & > * {
+      //border: 2px solid black;
+      width: 100%;
+    }
+
+    &--left {
+      background-color: $color-bg-secondary-dark;
+      background-image: url("/src/assets/images/Adobe\ Express\ -\ file\ \(30\).png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 80rem;
+      height: 45rem;
+      border-radius: 50%;
+      transform: translateY(300px);
+      opacity: 0;
+      animation: fadeUp 1s ease 0.5s forwards;
+
+      @media screen and (max-width: 375px) {
+        width: 40rem !important;
+        height: 40rem !important;
+      }
+    }
+
+    &--right {
+      @include flexCenter;
+      flex-direction: column;
+      gap: 40px 0;
+      overflow: hidden;
+      .aboutMe {
+        //border: 2px solid green;
+        overflow: hidden;
+        gap: 20px;
+        h1 {
+          font-family: "OriginalSurfer";
+          font-size: 10rem;
+          letter-spacing: 8px;
+          transform: translateX(-120px);
+          opacity: 0;
+          animation: fadeLeft 0.5s ease 1.2s forwards;
+        }
+        h2 {
+          font-family: "VariableFont";
+          font-size: 2.3rem;
+          letter-spacing: 2px;
+          transform: translateX(-120px);
+          opacity: 0;
+          animation: fadeLeft 0.7s ease 1.5s forwards;
+        }
+        p {
+          //border: 2px solid red;
+          font-family: "VariableFont";
+          font-size: 1.5rem;
+          letter-spacing: 1px;
+          width: 62%;
+          font-weight: 300;
+          word-spacing: -2px;
+          line-height: 24px;
+          transform: translateY(40px);
+          opacity: 0;
+          animation: fadeUp 0.3s ease 1.8s forwards;
+        }
+      }
+      .links {
+        align-self: flex-start;
+        ul {
+          list-style: none;
+          @include flexCenter;
+          gap: 0 20px;
+          li {
+            //border: 1px solid black;
+            border: 1px solid $color-text-primary;
+            background-color: $color-text-secondary;
+            width: 100%;
+            border-radius: 50%;
+            text-align: center;
+            padding: 4.5rem 2.5rem;
+            transform: translateY(90px);
+            opacity: 0;
+            animation: fadeUp linear 0.5s forwards;
+            &:nth-child(1) {
+              background-color: #7a1f90;
+              animation-delay: 2s;
+            }
+            &:nth-child(2) {
+              background-color: #648d07;
+              animation-delay: 2.5s;
+            }
+            &:nth-child(3) {
+              background-color: #863819;
+              animation-delay: 3s;
+            }
+            @media screen and (max-width: 410px) {
+              padding: 3rem 1rem;
+            }
+          }
+          a {
+            text-decoration: none;
+            color: $color-text-light;
+            font-family: "VariableFont";
+            font-size: 2rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            @media screen and (max-width: 410px) {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVE CODES
+
+@include respond(tab-port) {
+  .homePage__content {
+    flex-direction: column-reverse;
+    gap: 60px 0;
+  }
+  .homePage__content--right {
+    text-align: center;
+
+    p {
+      padding: 0 15rem;
+      width: 100% !important;
+    }
+  }
+
+  .links {
+    align-self: center !important;
+  }
+
+  .homePage__content--left {
+    width: 45rem;
+    height: 45rem;
+  }
+}
+
+@include respond(phone) {
+  .homePage__content--right {
+    padding: 1rem;
+    p {
+      padding: 0;
+    }
+  }
+  .links {
+    ul {
+      gap: 0 10px !important;
+      justify-content: space-between !important;
+    }
+  }
+}

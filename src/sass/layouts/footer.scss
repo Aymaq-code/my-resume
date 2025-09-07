@@ -1,0 +1,51 @@
+.footer {
+  border-top: 1px solid $color-text-secondary;
+
+  margin-top: 10rem;
+  padding: 4rem 4rem 7rem;
+
+  @include flexCenter;
+  &__box {
+    //border: 1px solid black;
+    padding: 1rem;
+    width: 100%;
+
+    h2 {
+      font-family: "VariableFont";
+      font-size: 1.7rem;
+      letter-spacing: 3px;
+      font-weight: 800;
+      color: $color-text-dark;
+    }
+
+    a,
+    p {
+      font-family: "VariableFont";
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      color: $color-text-dark;
+      font-weight: 350;
+      align-self: flex-end;
+    }
+
+    &:nth-child(3) {
+      a {
+        font-size: 2rem;
+        margin-left: 3rem;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVE
+
+@include respond(tab-port) {
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

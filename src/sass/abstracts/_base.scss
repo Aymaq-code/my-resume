@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "EagleLake";
+  src: url("/src/assets/fonts/EagleLake-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OriginalSurfer";
+  src: url("/src/assets/fonts/OriginalSurfer-Regular.ttf");
+}
+
+@font-face {
+  font-family: "VariableFont";
+  src: url("/src/assets/fonts/VariableFont_wght.ttf");
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px, 12/16 = 75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+  line-height: 1.7;
+  overflow-x: hidden;
+
+  background: $color-bg-secondary-light;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+*:focus {
+  //outline: 2px solid $coffee-accent-blue;
+  outline-offset: 2px;
+}
+
+.active {
+  //border-bottom: 2px solid $coffee-accent-blue;
+
+  &[aria-current="page"] {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      //  background-color: $coffee-accent-blue;
+    }
+  }
+}
+
+::selection {
+  //  background-color: $coffee-primary-dark;
+  color: white;
+}
+
+::-moz-selection {
+  //background-color: $coffee-accent-blue;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  //background: $coffee-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  // background: $coffee-accent-warm;
+  border-radius: 4px;
+
+  &:hover {
+    // background: darken($coffee-accent-warm, 10%);
+  }
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+// responsive images
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
