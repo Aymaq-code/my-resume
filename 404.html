@@ -4,19 +4,18 @@
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script>
-      // جلوگیری از redirect loop برای فایل 404.html
+      // برای HashRouter باید از hash استفاده کنیم
       const path = window.location.pathname;
 
       if (path.includes("404.html")) {
-        // اگر در حال حاضر در صفحه 404 هستیم، مستقیماً به homepage برو
         window.location.href = "/my-resume/index.html";
       } else {
-        // مسیر اصلی را به hash تبدیل کن (برای HashRouter)
         const search = window.location.search;
         const hash = window.location.hash;
+        // تبدیل مسیر به فرمت hash
         const cleanPath = path.replace("/my-resume/", "");
         window.location.href =
-          "/my-resume/index.html#" + cleanPath + search + hash;
+          "/my-resume/index.html#/" + cleanPath + search + hash;
       }
     </script>
   </head>
