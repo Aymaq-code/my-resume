@@ -1,6 +1,24 @@
 {
   "projects": [
     {
+      "id": 0,
+      "name": "resume app",
+      "discription": "Kabul Coffee is designed to provide a seamless user experience for coffee lovers. Users can explore a wide variety of coffee menus, reserve tables online through an easy booking system, learn about the café, its team, and awards, read the latest blog articles, and contact the café easily via the contact form or social media links. The design emphasizes responsive layouts, professional typography, and visually appealing imagery to create a cozy and welcoming vibe.",
+      "image": "https://i.postimg.cc/sfHT2pWC/resumm.png",
+      "technologies": [
+        "React",
+        "Build Tool Vite",
+        "React Router DOM",
+        "SCSS",
+        "Animations",
+        "State Management",
+        "Font Awesome",
+        "Google Maps Embed",
+        "Context API"
+      ],
+      "live": "https://aymaq-code.github.io/my-resume/"
+    },
+    {
       "id": 1,
       "name": "coffee app",
       "discription": "Kabul Coffee is designed to provide a seamless user experience for coffee lovers. Users can explore a wide variety of coffee menus, reserve tables online through an easy booking system, learn about the café, its team, and awards, read the latest blog articles, and contact the café easily via the contact form or social media links. The design emphasizes responsive layouts, professional typography, and visually appealing imagery to create a cozy and welcoming vibe.",
