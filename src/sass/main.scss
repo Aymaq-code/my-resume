@@ -9,7 +9,14 @@
 @import "./layouts/navigation.scss";
 @import "./layouts/footer.scss";
 
+// Messages
+@import "./messages/errorMsg.scss";
+@import "./messages/successMsg.scss";
+@import "./messages/successMsg.scss";
+
 //Pages
 @import "./pages/homePage.scss";
 @import "./pages/resumePage.scss";
 @import "./pages/projectsPage.scss";
+@import "./pages/contactPages.scss";
+@import "./pages/notFoundPage.scss";

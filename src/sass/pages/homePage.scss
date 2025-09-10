@@ -1,24 +1,22 @@
 .homePage {
   &__content {
-    //border: 2px solid blue;
-
     @include flexCenter;
     gap: 0 40px;
 
     & > * {
-      //border: 2px solid black;
       width: 100%;
     }
 
     &--left {
       background-color: $color-bg-secondary-dark;
-      background-image: url("/src/assets/images/Adobe\ Express\ -\ file\ \(30\).png");
-      background-position: center;
+      background-image: url("/src/assets/images/my-photo.png");
+      background-position: bottom;
       background-repeat: no-repeat;
       background-size: contain;
+      border-radius: 50%;
       width: 80rem;
       height: 45rem;
-      border-radius: 50%;
+
       transform: translateY(300px);
       opacity: 0;
       animation: fadeUp 1s ease 0.5s forwards;
@@ -33,11 +31,10 @@
       @include flexCenter;
       flex-direction: column;
       gap: 40px 0;
-      overflow: hidden;
       .aboutMe {
-        //border: 2px solid green;
         overflow: hidden;
         gap: 20px;
+
         h1 {
           font-family: "OriginalSurfer";
           font-size: 10rem;
@@ -57,9 +54,9 @@
         p {
           //border: 2px solid red;
           font-family: "VariableFont";
-          font-size: 1.5rem;
+          font-size: 1.6rem;
           letter-spacing: 1px;
-          width: 62%;
+          width: 100%;
           font-weight: 300;
           word-spacing: -2px;
           line-height: 24px;
@@ -82,21 +79,26 @@
             border-radius: 50%;
             text-align: center;
             padding: 4.5rem 2.5rem;
+            transition: all 0.3s ease !important;
             transform: translateY(90px);
             opacity: 0;
             cursor: pointer;
             animation: fadeUp linear 0.5s forwards;
             &:nth-child(1) {
-              background-color: #7a1f90;
+              background-color: $colr-template-2;
               animation-delay: 2s;
             }
             &:nth-child(2) {
-              background-color: #648d07;
+              background-color: $colr-template-3;
               animation-delay: 2.5s;
             }
             &:nth-child(3) {
-              background-color: #863819;
+              background-color: $color-templage-1;
               animation-delay: 3s;
+            }
+
+            &:hover {
+              background-color: rgba($color-text-secondary, 0.5) !important;
             }
             @media screen and (max-width: 410px) {
               padding: 3rem 1rem;
@@ -126,6 +128,7 @@
   .homePage__content {
     flex-direction: column-reverse;
     gap: 60px 0;
+    padding: 10rem 0 0 0;
   }
   .homePage__content--right {
     text-align: center;

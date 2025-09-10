@@ -33,3 +33,5 @@ Email: [rashidaymaq1994@gmail.com]
 LinkedIn: [https://www.linkedin.com/in/abdul-rashid-aymaq-3854a435a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app]
 
 Portfolio: [https://aymaq-code.github.io/my-resume/]
+
+![Screenshot](src/assets/images/resumm.png)

@@ -5,19 +5,21 @@
     letter-spacing: 7px;
     text-align: center;
     margin-bottom: 5rem;
+    transform: translateY(-30px);
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
     @media screen and (max-width: 900px) {
       margin-top: 7rem;
     }
   }
+
   &__contents {
-    //border: 2px solid blue;
+    overflow-x: hidden !important;
     display: flex;
     flex-direction: column;
     gap: 100px 0;
 
     &--box {
-      // background-color: lightcoral;
-
       display: flex;
       justify-content: space-between;
 
@@ -30,7 +32,6 @@
         padding: 0 1rem;
       }
       @media screen and (max-width: 420px) {
-        gap: 0;
       }
 
       margin-top: 5rem;
@@ -43,6 +44,8 @@
           font-family: "VariableFont";
           font-size: 2.5rem;
           text-transform: capitalize;
+          transform: translateY(-30px);
+          opacity: 0;
         }
 
         p {
@@ -51,6 +54,13 @@
           line-height: 25px;
           letter-spacing: 1.5px;
           margin-top: 1rem;
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        h4,
+        li {
+          transform: translateX(-30px);
+          opacity: 0;
         }
         ul {
           list-style: none;
@@ -63,15 +73,42 @@
           text-decoration: none;
           font-size: 1.6rem;
           font-family: "VariableFont";
+          transform: translateY(30px);
+          opacity: 0;
         }
       }
 
       .right {
         width: 50%;
+        img {
+          opacity: 0;
+          transform: translateX(300px);
+        }
         @media screen and (max-width: 900px) {
           width: 100%;
         }
       }
     }
   }
+}
+
+.in-view-once h2 {
+  animation: fadeUp 1s ease forwards;
+}
+
+.in-view-once p {
+  animation: fadeUp 1s ease forwards;
+}
+
+.in-view-once h4 {
+  animation: fadeLeft 1s ease 0.9s forwards;
+}
+.in-view-once li {
+  animation: fadeLeft 1s ease 1.5s forwards;
+}
+.in-view-once a {
+  animation: fadeUp 1s ease 1.5s forwards;
+}
+.in-view-once img {
+  animation: fadeLeft 1.3s ease 0.8s forwards;
 }

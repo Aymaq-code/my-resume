@@ -3,22 +3,30 @@ import Navigation from "../layouts/Navigation";
 import Loader from "../messages/Loader";
 import ErrorMsg from "../messages/ErrorMsg";
 import { useResume } from "../context/ResumeContext";
+import { useAnimation } from "../context/ScrollAnimationProvider";
 
 export default function ProjectsPage() {
+  const { registerOnce } = useAnimation();
   const { loading, error, projects } = useResume();
 
   if (loading) return <Loader />;
-  if (error) return <ErrorMsg />;
+  if (error)
+    return (
+      <ErrorMsg>
+        {" "}
+        Something went wrong. Please refresh or try again later.
+      </ErrorMsg>
+    );
+
   return (
     <main className="projectsPage">
       <Navigation />
       <div className="container">
         <h1>Projects</h1>
         <div className="projectsPage__contents">
-          {/* NO 1 */}
           {projects.map((project) => (
             <div className="projectsPage__contents--box" key={project.id}>
-              <div className="left">
+              <div className="left" ref={registerOnce}>
                 <h2>{project.name}</h2>
                 <p>{project.discription}</p>
                 <ul>
@@ -35,7 +43,7 @@ export default function ProjectsPage() {
                   Click here to see the project live
                 </a>
               </div>
-              <div className="right">
+              <div className="right" ref={registerOnce}>
                 <img src={project.image} alt="coffee app" />
               </div>
             </div>

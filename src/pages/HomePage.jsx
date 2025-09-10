@@ -15,9 +15,13 @@ export default function HomePage() {
               <h1>Hello</h1>
               <h2>A Bit About Me</h2>
               <p>
-                Welcome to my online CV! I specialize in web development and
-                have a passion for creating unique and innovative digital
-                experiences. Let's work together to bring your vision to life.
+                Welcome to my online CV! <br />
+                I’m, a passionate <strong>Frontend Web Developer</strong>. I
+                specialize in building modern, responsive, and user-friendly
+                websites using HTML, CSS, JavaScript, and React. I love creating
+                clean designs with functional development to deliver unique
+                digital experiences.{" "}
+                <strong>Together, we can turn your ideas into reality.</strong>
               </p>
             </div>
             <div className="links">

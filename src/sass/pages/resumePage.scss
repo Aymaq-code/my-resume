@@ -1,81 +1,103 @@
 .resumePage {
-  background-color: rgb(241, 241, 221);
+  background: rgb(241, 241, 221);
+
   &__contents {
     @media screen and (max-width: 900px) {
       padding: 15rem 0;
     }
-    h2,
-    h1 {
+
+    h1,
+    h2 {
       font-family: "OriginalSurfer";
     }
+
     p {
-      font-size: 1.5rem;
-      font-family: "VariableFont";
-      line-height: 24px;
+      font: 1.5rem/24px "VariableFont";
       letter-spacing: 1.5px;
     }
+
     .title {
       text-align: center;
       font-size: 6rem;
       letter-spacing: 4px;
     }
+
     .experience,
     .education {
       padding: 4rem 15rem;
+
       @media screen and (max-width: 900px) {
-        padding: 4rem 1rem;
+        padding: 4rem 1rem !important;
       }
     }
-
-    .education {
-      background-color: rgb(238, 238, 160);
-
-      @media screen and (max-width: 900px) {
-        padding: 4rem 15rem;
+    .experience {
+      h1 {
+        font-size: 3rem;
       }
-      @media screen and (max-width: 600px) {
-        padding: 4rem 1rem;
+      h2 {
+        font: 2.3rem "VariableFont";
+      }
+    }
+    .education {
+      background: rgb(238, 238, 160);
+      .box__head {
+        h1 {
+          font-size: 3rem;
+        }
+        h2 {
+          font: 2rem "VariableFont";
+        }
       }
       .box__body {
         width: 50%;
         align-self: flex-end;
         position: relative;
+
         @media screen and (max-width: 900px) {
           width: 100%;
         }
       }
+
       .details {
         justify-self: end;
         position: absolute;
+        top: 1rem;
         left: 0;
-        bottom: 2rem;
         width: 100% !important;
+
         img {
-          perspective: 2000;
-          height: 6rem;
+          perspective: 1000;
+          height: 5rem;
+          margin: 2rem 0 0;
           transform-style: preserve-3d;
+
+          @media screen and (max-width: 432px) {
+            margin: 2rem 0 1.5rem;
+          }
         }
+
         h2 {
-          font-size: 3rem;
-          font-family: "VariableFont";
+          font: 2rem "VariableFont";
+          margin-top: 3rem;
         }
       }
     }
+
     .achievments {
       .details {
         width: 100% !important;
-
         display: flex;
         justify-content: space-between;
+
         @media screen and (max-width: 600px) {
           flex-direction: column;
           gap: 10px 0;
         }
-        .left {
-          h2 {
-            font-family: "VariableFont";
-          }
+
+        .left h2 {
+          font-family: "VariableFont";
         }
+
         .right {
           width: 39%;
 
@@ -85,25 +107,24 @@
         }
       }
     }
+
     .box {
-      //border: 2px solid black;
       @include flexCenter;
       flex-direction: column;
 
       &__head {
         overflow: hidden;
         align-self: self-start;
+
         h1 {
-          font-size: 4rem;
-          font-weight: 100;
+          font: 100 4rem / normal;
           letter-spacing: 2px;
           transform: translateX(-100px);
           opacity: 0;
         }
 
         h2 {
-          font-weight: 100;
-          font-size: 2rem;
+          font: 100 2rem / normal;
           transform: translateX(-100px);
           opacity: 0;
           animation-delay: 0.5s;
@@ -115,10 +136,18 @@
         width: 100%;
         padding: 8rem 1rem;
 
-        h2 {
-          font-size: 3rem;
-          font-weight: 300;
+        @media screen and (max-width: 656px) {
+          padding: 23rem 1.3rem 0;
         }
+
+        h2 {
+          font: 300 3rem / normal;
+
+          @media screen and (max-width: 432px) {
+            line-height: 4rem;
+          }
+        }
+
         p {
           margin-top: 1.5rem;
         }
@@ -126,14 +155,17 @@
         .details {
           width: 50%;
           float: right;
+
           h2 {
             opacity: 0;
             transform: translateY(-100px);
           }
+
           p {
             opacity: 0;
             transform: translateY(100px);
           }
+
           @media screen and (max-width: 900px) {
             width: 100%;
           }
@@ -156,8 +188,8 @@
   p {
     animation: fadeUp 0.8s ease 0.3s forwards;
   }
+}
 
-  img {
-    animation: flip 4s ease-in-out infinite;
-  }
+.box__body .details img {
+  animation: flip 4s ease 1s infinite;
 }

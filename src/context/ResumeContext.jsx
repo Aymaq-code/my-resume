@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 
-const BASE_URL = "http://localhost:4000";
+const BASE_URL = "/my-resume/data.json";
 
 const ResumeContext = createContext();
 
@@ -33,10 +33,16 @@ function ResumeProvider({ children }) {
     async function fetchProjects() {
       dispatch({ type: "loading" });
       try {
-        const res = await fetch(`${BASE_URL}/projects`);
+        const res = await fetch(BASE_URL);
+
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+
         const data = await res.json();
-        dispatch({ type: "projects", payload: data });
+        dispatch({ type: "projects", payload: data.projects }); // این خط تغییر کرد
       } catch (error) {
+        console.error("Fetch error:", error);
         dispatch({
           type: "rejected",
           payload: error.message || "Failed to fetch projects",

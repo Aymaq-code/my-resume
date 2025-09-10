@@ -43,81 +43,44 @@ html {
 body {
   box-sizing: border-box;
   line-height: 1.7;
-
+  overflow-x: hidden;
+  overflow-y: scroll;
   background: $color-bg-secondary-light;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-.overflow-x-hidden {
-  overflow-x: hidden !important;
-}
-
-.overflow-hidden {
-  overflow: hidden !important;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-*:focus {
-  //outline: 2px solid $coffee-accent-blue;
-  outline-offset: 2px;
-}
-
 .active {
-  //border-bottom: 2px solid $coffee-accent-blue;
-
-  &[aria-current="page"] {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      //  background-color: $coffee-accent-blue;
-    }
-  }
+  color: $color-templage-1 !important;
 }
 
 ::selection {
-  //  background-color: $coffee-primary-dark;
-  color: white;
+  background-color: $color-templage-1;
+  color: $color-text-light;
 }
 
 ::-moz-selection {
-  //background-color: $coffee-accent-blue;
-  color: white;
+  background-color: $colr-template-3;
+  color: $color-templage-1;
 }
 
 ::-webkit-scrollbar {
   width: 8px;
+  color: wheat !important;
+  background-color: red;
 }
 
 ::-webkit-scrollbar-track {
-  //background: $coffee-primary;
+  background-color: $color-text-secondary;
 }
 
 ::-webkit-scrollbar-thumb {
-  // background: $coffee-accent-warm;
+  background: $color-templage-1;
   border-radius: 4px;
 
   &:hover {
-    // background: darken($coffee-accent-warm, 10%);
+    background: $colr-template-2;
   }
 }
 
