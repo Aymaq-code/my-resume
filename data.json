@@ -81,6 +81,22 @@
       "image": "https://i.postimg.cc/XJzYtqVL/Light-Animation-app.png",
       "technologies": ["HTML5", "CSS3", "JavaScript"],
       "live": "https://aymaq-code.github.io/Lightweight-Web-Animations/"
+    },
+    {
+      "id": 6,
+      "name": "Explore the Heart of Asia",
+      "discription": "Explore the Heart of Asia is a fully responsive tour booking web application built using React, Redux Toolkit, Tailwind CSS, and Vite.",
+      "image": "https://i.postimg.cc/2y2Rt9Ts/AFG-TOUR.png",
+      "technologies": [
+        "CSS3",
+        "Tailwind CSS styling",
+        "JavaScript",
+        "React Router (HashRouter, loaders, errors, nested routes)",
+        "Zustand global state management",
+        "Custom hooks + optimized rendering with useMemo",
+        "Error boundary + loading states"
+      ],
+      "live": "https://aymaq-code.github.io/AFG-TOUR/"
     }
   ]
 }
