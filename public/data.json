@@ -19,15 +19,15 @@
     {
       "id": 2,
       "name": "to-do list app",
-      "discription": "A stylish and interactive to-do list application built with React. Add, search, and delete task with a clean, responsive UI.",
-      "image": "https://i.postimg.cc/mk7nY1q5/todo-app.png",
+      "discription": "A stylish and interactive to-do list application built with React. Add, search, and delete tasks with a clean, responsive UI and real-time text highlighting.",
+      "image": "https://i.postimg.cc/6qBvHkmj/todo-app.png",
       "technologies": [
-        "React",
-        "CSS3",
+        "React (Hooks, Components)",
+        "Redux (State Management)",
+        "CSS3 (Custom variables, blur effects, gradients)",
         "JavaScript (ES6+)",
-        "useReducer for cleaner state management"
       ],
-      "live": "https://aymaq-code.github.io/notepad-app/"
+      "live": "https://aymaq-code.github.io/To-do-List/"
     },
     {
       "id": 3,
