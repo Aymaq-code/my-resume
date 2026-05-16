@@ -26,7 +26,7 @@ function reducer(state, action) {
 function ResumeProvider({ children }) {
   const [{ loading, error, projects }, dispatch] = useReducer(
     reducer,
-    initialState
+    initialState,
   );
 
   useEffect(() => {
@@ -40,7 +40,7 @@ function ResumeProvider({ children }) {
         }
 
         const data = await res.json();
-        dispatch({ type: "projects", payload: data.projects }); // این خط تغییر کرد
+        dispatch({ type: "projects", payload: data.projects });
       } catch (error) {
         console.error("Fetch error:", error);
         dispatch({
