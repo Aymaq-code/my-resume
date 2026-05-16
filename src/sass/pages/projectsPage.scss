@@ -37,9 +37,7 @@
       margin-top: 5rem;
       .left {
         width: 40%;
-        @media screen and (max-width: 900px) {
-          width: 100%;
-        }
+
         h2 {
           font-family: "VariableFont";
           font-size: 2.5rem;
@@ -75,6 +73,10 @@
           font-family: "VariableFont";
           transform: translateY(30px);
           opacity: 0;
+        }
+
+        @media screen and (max-width: 900px) {
+          width: 100%;
         }
       }
 

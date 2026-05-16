@@ -13,7 +13,6 @@ export default function ProjectsPage() {
   if (error)
     return (
       <ErrorMsg>
-        {" "}
         Something went wrong. Please refresh or try again later.
       </ErrorMsg>
     );
@@ -38,8 +37,7 @@ export default function ProjectsPage() {
                 <a
                   href={`${project.live}`}
                   target="_blank"
-                  rel="noopener noreferrer"
-                >
+                  rel="noopener noreferrer">
                   Click here to see the project live
                 </a>
               </div>
